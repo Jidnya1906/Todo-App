@@ -55,4 +55,14 @@ open class TodoViewModel(application : Application) : AndroidViewModel(applicati
         }
     }
 
+    fun deleteMultipleTodos(ids: Set<Int>) {
+        viewModelScope.launch {
+            todos.value.forEach { todo ->
+                if (ids.contains(todo.id)) {
+                    todoRepository.deleteTodo(todo)
+                }
+            }
+        }
+    }
+
 }
