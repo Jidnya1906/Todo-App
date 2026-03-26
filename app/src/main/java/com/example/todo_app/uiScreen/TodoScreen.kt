@@ -73,6 +73,7 @@ fun TodoScreen(todoViewModel: TodoViewModel) {
                     },
                     shape = RoundedCornerShape(16.dp)
                 ) {
+                    // AND and DELETE BUTTON
                     Text(if (selectedItems.isNotEmpty()) "Delete" else "Add")
                 }
             }

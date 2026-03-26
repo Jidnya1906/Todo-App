@@ -54,7 +54,7 @@ open class TodoViewModel(application : Application) : AndroidViewModel(applicati
             todoRepository.deleteTodo(todo)
         }
     }
-
+//SELECTING Multiple
     fun deleteMultipleTodos(ids: Set<Int>) {
         viewModelScope.launch {
             todos.value.forEach { todo ->
